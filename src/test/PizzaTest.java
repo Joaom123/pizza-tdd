@@ -6,6 +6,10 @@ import org.junit.*;
 import static org.junit.Assert.assertEquals;
 
 public class PizzaTest {
+    @Before
+    public void zeraVariaveisEstaticas() {
+        Pizza.ingredientesDeTodasAsPizzas.clear();
+    }
 
     @Test
     public void adicionaIngrediente() {
