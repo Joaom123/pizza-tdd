@@ -13,4 +13,13 @@ public class CarrinhoDeCompras {
         pizzas.add(pizza);
     }
 
+    public int valorTotal() {
+        int valorTotal = 0;
+
+        for (Pizza pizza : pizzas) {
+            valorTotal += pizza.getPreco();
+        }
+
+        return valorTotal;
+    }
 }
