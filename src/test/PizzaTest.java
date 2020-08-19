@@ -98,6 +98,23 @@ public class PizzaTest {
     }
 
     @Test
+    public void precoDaPizzaComSeteIngredientes() {
+        Pizza pizza = new Pizza();
+        pizza.adicionaIngrediente("queijo");
+        pizza.adicionaIngrediente("presunto");
+        pizza.adicionaIngrediente("alho");
+        pizza.adicionaIngrediente("maionese");
+        pizza.adicionaIngrediente("catchup");
+        pizza.adicionaIngrediente("tomate");
+        pizza.adicionaIngrediente("tomate");
+        pizza.adicionaIngrediente("tomate");
+
+        int precoDaPizza = 23;
+
+        assertEquals(precoDaPizza, pizza.getPreco());
+    }
+
+    @Test
     public void contabilizaIngredientes() {
         Pizza pizza1 = new Pizza();
         pizza1.adicionaIngrediente("queijo");
