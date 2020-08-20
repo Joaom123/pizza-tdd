@@ -5,19 +5,24 @@ import static org.junit.Assert.assertEquals;
 import src.CarrinhoDeCompras;
 import src.Pizza;
 
-import java.net.StandardSocketOptions;
-
 public class CarrinhoDeComprasTest {
+    private Pizza pizza1;
+    private Pizza pizza2;
+    private Pizza pizza3;
+    private CarrinhoDeCompras carrinhoDeCompras;
+
+
     @Before
-    public void zera(){
+    public void inicializa(){
         Pizza.ingredientesDeTodasAsPizzas.clear();
+        carrinhoDeCompras = new CarrinhoDeCompras();
+        pizza1 = new Pizza();
+        pizza2 = new Pizza();
+        pizza3 = new Pizza();
     }
 
     @Test
     public void adicionaUmaPizza() {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        Pizza pizza1 = new Pizza();
-
         pizza1.adicionaIngrediente("queijo");
         carrinhoDeCompras.adicionaPizza(pizza1);
 
@@ -26,10 +31,6 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void adicionaDuasPizzas() {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        Pizza pizza1 = new Pizza();
-        Pizza pizza2 = new Pizza();
-
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -44,9 +45,6 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void totalDoPrecoParaUmaPizzaNoCarrinho() {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        Pizza pizza1 = new Pizza();
-
         pizza1.adicionaIngrediente("queijo");
         carrinhoDeCompras.adicionaPizza(pizza1);
 
@@ -55,10 +53,6 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void totalDoPrecoParaDuasPizzasNoCarrinho() {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        Pizza pizza1 = new Pizza();
-        Pizza pizza2 = new Pizza();
-
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -74,11 +68,6 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void totalDoPrecoParaTresPizzasNoCarrinho() {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        Pizza pizza1 = new Pizza();
-        Pizza pizza2 = new Pizza();
-        Pizza pizza3 = new Pizza();
-
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -104,11 +93,6 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void quantidadeUtilizadaDeCadaIngrediente() {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        Pizza pizza1 = new Pizza();
-        Pizza pizza2 = new Pizza();
-        Pizza pizza3 = new Pizza();
-
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");

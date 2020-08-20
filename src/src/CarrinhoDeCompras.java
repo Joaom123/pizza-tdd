@@ -10,7 +10,9 @@ public class CarrinhoDeCompras {
     }
 
     public void adicionaPizza(Pizza pizza) {
-        pizzas.add(pizza);
+        //TODO: Lançar exceção
+        if (pizza.temAlgumIngrediente())
+            pizzas.add(pizza);
     }
 
     public int valorTotal() {
