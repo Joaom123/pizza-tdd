@@ -1,7 +1,9 @@
 package src;
 
+import exceptions.PizzaSemIngredienteException;
+
 public class Principal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PizzaSemIngredienteException {
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
         Pizza pizza1 = new Pizza();
         Pizza pizza2 = new Pizza();

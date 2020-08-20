@@ -1,5 +1,6 @@
 package src;
 
+import exceptions.PizzaSemIngredienteException;
 import java.util.ArrayList;
 
 public class CarrinhoDeCompras {
@@ -9,10 +10,10 @@ public class CarrinhoDeCompras {
         pizzas = new ArrayList<>();
     }
 
-    public void adicionaPizza(Pizza pizza) {
-        //TODO: Lançar exceção
-        if (pizza.temAlgumIngrediente())
-            pizzas.add(pizza);
+    public void adicionaPizza(Pizza pizza) throws PizzaSemIngredienteException {
+        if (!pizza.temAlgumIngrediente())
+            throw new PizzaSemIngredienteException();
+        pizzas.add(pizza);
     }
 
     public int valorTotal() {

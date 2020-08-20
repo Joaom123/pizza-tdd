@@ -1,5 +1,6 @@
 package test;
 
+import exceptions.PizzaSemIngredienteException;
 import org.junit.*;
 import static org.junit.Assert.assertEquals;
 import src.CarrinhoDeCompras;
@@ -22,7 +23,7 @@ public class CarrinhoDeComprasTest {
     }
 
     @Test
-    public void adicionaUmaPizza() {
+    public void adicionaUmaPizza() throws PizzaSemIngredienteException {
         pizza1.adicionaIngrediente("queijo");
         carrinhoDeCompras.adicionaPizza(pizza1);
 
@@ -30,7 +31,7 @@ public class CarrinhoDeComprasTest {
     }
 
     @Test
-    public void adicionaDuasPizzas() {
+    public void adicionaDuasPizzas() throws PizzaSemIngredienteException {
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -44,7 +45,7 @@ public class CarrinhoDeComprasTest {
     }
 
     @Test
-    public void totalDoPrecoParaUmaPizzaNoCarrinho() {
+    public void totalDoPrecoParaUmaPizzaNoCarrinho() throws PizzaSemIngredienteException {
         pizza1.adicionaIngrediente("queijo");
         carrinhoDeCompras.adicionaPizza(pizza1);
 
@@ -52,7 +53,7 @@ public class CarrinhoDeComprasTest {
     }
 
     @Test
-    public void totalDoPrecoParaDuasPizzasNoCarrinho() {
+    public void totalDoPrecoParaDuasPizzasNoCarrinho() throws PizzaSemIngredienteException {
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -67,7 +68,7 @@ public class CarrinhoDeComprasTest {
     }
 
     @Test
-    public void totalDoPrecoParaTresPizzasNoCarrinho() {
+    public void totalDoPrecoParaTresPizzasNoCarrinho() throws PizzaSemIngredienteException {
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -92,7 +93,7 @@ public class CarrinhoDeComprasTest {
     }
 
     @Test
-    public void quantidadeUtilizadaDeCadaIngrediente() {
+    public void quantidadeUtilizadaDeCadaIngrediente() throws PizzaSemIngredienteException {
         pizza1.adicionaIngrediente("queijo");
 
         pizza2.adicionaIngrediente("queijo");
@@ -115,5 +116,10 @@ public class CarrinhoDeComprasTest {
         assertEquals(2, Pizza.quantidadeDeUmIngredienteEmTodasAsPizzas("presunto"));
         assertEquals(2, Pizza.quantidadeDeUmIngredienteEmTodasAsPizzas("tomate"));
         assertEquals(1, Pizza.quantidadeDeUmIngredienteEmTodasAsPizzas("alho"));
+    }
+
+    @Test(expected = PizzaSemIngredienteException.class)
+    public void adicionaPizzaSemIngrediente() throws PizzaSemIngredienteException {
+        carrinhoDeCompras.adicionaPizza(pizza1);
     }
 }
