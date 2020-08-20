@@ -29,6 +29,10 @@ public class Pizza {
         return 23;
     }
 
+    public boolean temAlgumIngrediente() {
+        return !ingredientes.isEmpty();
+    }
+
     private static void contabilizaIngrediente(String ingrediente) {
         if(!ingredientesDeTodasAsPizzas.containsKey(ingrediente))
             ingredientesDeTodasAsPizzas.put(ingrediente, 0);
