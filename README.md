@@ -2,6 +2,7 @@
 Implementação do exercício da segunda semana do curso [Orientação à Objeto com Java](https://www.coursera.org/learn/orientacao-a-objetos-com-java).
 
 ## Instruções
+### Semana 2
 Crie uma classe Pizza que possua o método adicionaIngrediente() que recebe uma String com o ingrediente a ser adicionado. Essa classe também deve possuir o método getPreco() que calcula da seguinte forma: 2 ingredientes ou menos custam 15 reais, de 3 a 5 ingredientes custam 20 reais e mais de 5 ingredientes custa 23 reais.
 
 É preciso contabilizar os ingredientes gastos por todas as pizzas! Utilize uma variável estática na classe Pizza para guardar esse tipo de informação (dica: utilize a classe HashMap para guardar o ingrediente como chave e um Integer como valor). Crie o método estático contabilizaIngrediente() para ser chamado dentro de adicionaIngrediente() e fazer esse registro.
@@ -13,3 +14,12 @@ Crie uma classe Principal com o método main() que faz o seguinte:
 - Adiciona essas Pizzas em um CarrinhoDeCompra
 - Imprime o total do CarrinhoDeCompra
 - Imprime a quantidade utilizada de cada ingrediente
+
+### Semana 3
+Faça os testes de unidade da classe Pizza e verifique se:
+- O valor da Pizza está correto de acordo com a quantidade de ingredientes
+- O registro de ingredientes funcionou corretamente
+
+Faça os testes da classe CarrinhoDeCompras verificando se: 
+- O preço das pizzas são somados corretamente 
+- Impede a adição de uma pizza sem ingredientes
