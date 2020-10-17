@@ -13,13 +13,13 @@ Implementação dos exercícios do curso [Orientação à Objeto com Java](https
     - Imprime a quantidade utilizada de cada ingrediente
 
 ### Semana 3
-Faça os testes de unidade da classe Pizza e verifique se:
-- O valor da Pizza está correto de acordo com a quantidade de ingredientes
-- O registro de ingredientes funcionou corretamente
+- Faça os testes de unidade da classe Pizza e verifique se:
+    - O valor da Pizza está correto de acordo com a quantidade de ingredientes
+    - O registro de ingredientes funcionou corretamente
 
-Faça os testes da classe CarrinhoDeCompras verificando se: 
-- O preço das pizzas são somados corretamente 
-- Impede a adição de uma pizza sem ingredientes
+- Faça os testes da classe CarrinhoDeCompras verificando se: 
+    - O preço das pizzas são somados corretamente 
+    - Impede a adição de uma pizza sem ingredientes
 
 ### Semana 4
 - Crie uma classe chamada Produto que deve possuir um nome, um código e um preço. Sobrescreva os métodos equals() e hashCode() de Object (veja seção sobre esses métodos), de forma a serem considerados iguais instancias de Produto que possuam o mesmo código.
